@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <title>Rupin's Anime Clothing | Info</title>
+    <meta charset="UTF-8" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="normalize.css"/>
+  <script src="Info.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <a href="HomePage.html">
+      <p style="text-align: center;"><img src ="pictures/Animeshop.jpg" alt= "Logo" width="1800" height="400"/></p>
+    </a>
+</header>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="HomePage.html">Home</a>
+    <a href="Products.html">Products</a>
+    <a href="Info.html">Info</a>
+</div>
+
+  <div id="main">
+    <button class="closebtn"  onclick="openNav()">☰ Navigation</button>
+  </div>
+
+  <script src="Navigation.js"></script>
+
+<body>
+
+  <body onload="javascipt:validateForm();">
+
+    <p style="font-size: 40pt; text-align: center; font-family: cursive;">Info</p>
+    
+    <div class="bodyContent">
+
+        <h2>Please Fill The Signup Information Below!</h2>
+        
+        <form id="signup" method="post" action="https://httpbin.org/post" onsubmit="return checkForm(this);">
+          <div class="boxed" style="border-style: outset;">
+          <h3 style="color: rgb(0, 0, 0);">Enter The following:</h3>
+          <label for="fName" style="color: rgb(0, 0, 0);">First Name: </label>
+          <input type="text" name="fName" id="fName" required pattern="(?=.*[A-Z])[A-Za-z].{0,20}" title="Letters only and starting must be CAPS"><br>
+          <label for="lname" style="color: rgb(0, 0, 0);">Last Name: </label>
+          <input type="text" name="name" id="lname" required pattern="(?=.*[A-Z])[A-Za-z].{0,20}" title="Letters only and starting must be CAPS"><br>
+          <label for="email" style="color: rgb(0, 0, 0);">Email Address: </label>
+          <input type="email" name="email" id="email" required><br>
+
+          <h3 style="color: rgb(0, 0, 0);">Enter a Username and Password:</h3>
+          <label style="color: rgb(0, 0, 0);">Username: <input type="text" name="username" required></label> <br>
+          <label style="color: rgb(0, 0, 0);">Password: <input type="password" name="pwd1" required></label><br>
+          <label style="color: rgb(0, 0, 0);">Confirm Password: <input type="password" name="pwd2" required></label><br>
+          
+          <h3 style="color: rgb(0, 0, 0);">Enter the following:</h3>
+          <label for="Gender" style="color: rgb(0, 0, 0);">Gender: </label>
+          <select name="Gender" id="Gender" required><br>
+              <option disabled selected>Choose a Gender</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+              <option value="G">Pefer not to share</option>
+          </select>
+          <br>
+          <label for="Age" style="color: rgb(0, 0, 0);">Age: </label>
+          <input type="text" name="Age" id="Age" required pattern="{18,60}" title="Age is between 18 and 60"><br>
+          <label for="Address" style="color: rgb(0, 0, 0);">Address: </label>
+          <input type="text" name="Address" id="Address" required onfocusout="var address = validateAlpha(address);"><br>
+          <label for="city" style="color: rgb(0, 0, 0);">City: </label>
+          <input type="text" name="city" id="city" required onfocusout="var city = validateAlpha(city);"><br>
+          <label for="province" style="color: rgb(0, 0, 0);">Province: </label>
+          <select name="shippingProvince" id="province" required>
+            <option disabled selected>Choose a province</option>
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NL">Newfoundland and Labrador</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NU">Nunavut</option>
+            <option value="ON">Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="YT">Yukon</option>
+        </select>
+        <br>
+      </form>
+
+          <input type="hidden" name="lastName" id="lastName" value="Rai" />
+          <input type="hidden" name="studentId" id="studentId" value="106212202" />
+
+          <input type="Submit" value="Submit" style="width:100px; margin-left: auto;">
+          <input type="Reset" value="Reset" style="width: 100px; margin-left: auto;">
+       
+          </div>
+
+  <footer>
+	  <div class="center">
+        Copyright &copy; 2021, Rupin's Anime Clothing
+	  </div>
+	</footer>
+
+</body>
+</html>
